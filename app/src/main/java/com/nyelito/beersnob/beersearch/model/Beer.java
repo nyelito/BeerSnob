@@ -284,6 +284,8 @@ public class Beer implements Parcelable {
         this.originalGravity = originalGravity;
     }
 
+    public Beer() {
+    }
 
     protected Beer(Parcel in) {
         id = in.readString();

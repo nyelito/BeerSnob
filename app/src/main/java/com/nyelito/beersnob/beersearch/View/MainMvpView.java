@@ -9,7 +9,6 @@ public interface MainMvpView extends MvpView {
 
     void showSearchResults(List<Beer> results);
 
-    void showMessage(int stringId);
 
     void showProgressIndicator();
 }

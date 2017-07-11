@@ -21,6 +21,8 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainPresenter implements Presenter<MainMvpView> {
     public static final String API_KEY = "8118938a83520185a420e40072449d19";
+    public static final String SEARCH_TYPE = "beer";
+    public static final String VERIFIED = "verified";
     public static String TAG = "MainPresenter";
 
     private MainMvpView mainMvpView;
@@ -40,7 +42,7 @@ public class MainPresenter implements Presenter<MainMvpView> {
         BeerSnobApplication application = BeerSnobApplication.get(mainMvpView.getContext());
         BeerDBService beerDBService = application.getBeerDBService();
 
-        Observable<BeerSearchData> searchObservable = beerDBService.searchForBeer(searchText, API_KEY, "beer");
+        Observable<BeerSearchData> searchObservable = beerDBService.searchForBeer(searchText, API_KEY, SEARCH_TYPE);
 
         mainMvpView.showProgressIndicator();
 
@@ -65,18 +67,25 @@ public class MainPresenter implements Presenter<MainMvpView> {
                     @Override
                     public void onComplete() {
                         if (mainMvpView != null) {
-                            List<Beer> verifiedBeers = new ArrayList<>();
+                            List<Beer> verifiedBeers = new ArrayList<Beer>();
                             if(beerResults != null && beerResults.getData() != null) {
-                                for (Beer b : beerResults.getData()) {
-                                    if (b.getStatus().equalsIgnoreCase("verified")) {
-                                        verifiedBeers.add(b);
-                                    }
-                                }
+                                verifiedBeers = filterVerifiedBeers(beerResults.getData());
                             }
                             mainMvpView.showSearchResults(verifiedBeers);
                         }
                     }
                 });
+    }
+
+    protected List<Beer> filterVerifiedBeers(List<Beer> beerList) {
+        List<Beer> verifiedBeers = new ArrayList<>();
+        for (Beer b : beerList) {
+            if (b.getStatus() != null && b.getStatus().equalsIgnoreCase(VERIFIED)) {
+                verifiedBeers.add(b);
+            }
+        }
+
+        return verifiedBeers;
     }
 
 }

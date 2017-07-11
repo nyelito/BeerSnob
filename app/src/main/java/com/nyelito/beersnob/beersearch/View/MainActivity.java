@@ -150,10 +150,6 @@ public class MainActivity extends AppCompatActivity implements MainMvpView{
 
     }
 
-    @Override
-    public void showMessage(int stringId) {
-
-    }
 
     @Override
     public void showProgressIndicator() {

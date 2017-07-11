@@ -66,6 +66,10 @@ public class BeerSearchData implements Parcelable {
         this.status = status;
     }
 
+    public BeerSearchData(){
+
+    }
+
 
     protected BeerSearchData(Parcel in) {
         currentPage = in.readByte() == 0x00 ? null : in.readInt();
