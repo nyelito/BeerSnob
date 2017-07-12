@@ -1,15 +1,13 @@
 package com.nyelito.beersnob;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.support.v7.content.res.AppCompatResources;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.github.florent37.glidepalette.BitmapPalette;
 import com.github.florent37.glidepalette.GlidePalette;
-import com.nyelito.beersnob.beersearch.model.Beer;
+import com.nyelito.beersnob.BeerSearch.Model.Beer;
 
 /**
  * Created by User on 7/9/2017.

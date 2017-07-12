@@ -3,7 +3,7 @@ package com.nyelito.beersnob;
 import android.app.Application;
 import android.content.Context;
 
-import com.nyelito.beersnob.beerDB.BeerDBService;
+import com.nyelito.beersnob.BeerDB.BeerDBService;
 
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;

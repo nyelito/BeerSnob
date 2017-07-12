@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".beersearch.View.MainActivity"
+            android:name=".BeerSearch.View.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,13 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".beerDetails.view.BeerDetailsActivity"
+            android:name=".BeerDetails.View.BeerDetailsActivity"
             android:label="@string/title_activity_beer_details"
-            android:parentActivityName=".beersearch.View.MainActivity"
+            android:parentActivityName=".BeerSearch.View.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-detailedBeer
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nyelito.beersnob.beersearch.View.MainActivity" />
+                android:value="com.nyelito.beersnob.BeerSearch.View.MainActivity" />
         </activity>
     </application>
 

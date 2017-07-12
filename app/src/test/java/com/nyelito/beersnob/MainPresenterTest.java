@@ -1,10 +1,9 @@
 package com.nyelito.beersnob;
 
-import com.nyelito.beersnob.beerDB.BeerDBService;
-import com.nyelito.beersnob.beersearch.Presenter.MainPresenter;
-import com.nyelito.beersnob.beersearch.View.MainMvpView;
-import com.nyelito.beersnob.beersearch.model.Beer;
-import com.nyelito.beersnob.beersearch.model.BeerSearchData;
+import com.nyelito.beersnob.BeerDB.BeerDBService;
+import com.nyelito.beersnob.BeerSearch.Presenter.MainPresenter;
+import com.nyelito.beersnob.BeerSearch.View.MainMvpView;
+import com.nyelito.beersnob.BeerSearch.Model.BeerSearchData;
 
 import org.junit.After;
 import org.junit.Before;
@@ -13,9 +12,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;

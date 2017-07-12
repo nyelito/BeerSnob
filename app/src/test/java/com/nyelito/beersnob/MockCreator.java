@@ -1,7 +1,7 @@
 package com.nyelito.beersnob;
 
-import com.nyelito.beersnob.beersearch.model.Beer;
-import com.nyelito.beersnob.beersearch.model.BeerSearchData;
+import com.nyelito.beersnob.BeerSearch.Model.Beer;
+import com.nyelito.beersnob.BeerSearch.Model.BeerSearchData;
 
 import java.util.ArrayList;
 import java.util.List;
